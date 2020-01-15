@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MiniNotes</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="menu_delete">Delete</string>
+    <string name="menu_archive">Archive</string>
+    <string name="menu_notes">Notes</string>
+
+
+</resources>
