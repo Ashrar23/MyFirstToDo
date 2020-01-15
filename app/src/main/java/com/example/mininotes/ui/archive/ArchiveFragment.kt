@@ -11,23 +11,10 @@ import com.example.mininotes.R
 import java.util.Observer
 
 class ArchiveFragment : Fragment() {
-    private lateinit var archiveViewModel: ArchiveViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        archiveViewModel =
-            ViewModelProviders.of(this).get(ArchiveViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_archive, container, false)
-        val textView: TextView = root.findViewById(R.id.archive)
-        archiveViewModel.text.observe(this, androidx.lifecycle.Observer{
-            textView.text = it
-
-        })
-
-        return root
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_archive, container, false)
     }
 
 }
