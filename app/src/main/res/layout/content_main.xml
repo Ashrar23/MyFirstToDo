@@ -21,6 +21,7 @@
         app:navGraph="@navigation/nobile_navigation">
 
 
+
         <ListView
             android:id="@+id/list_todo"
             android:layout_width="match_parent"

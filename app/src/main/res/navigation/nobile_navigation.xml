@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/obile_navigation"
-    app:startDestination="@id/nav_notes">
+    app:startDestination="@+id/nav_archive">
 
     <fragment
         android:id="@+id/nav_archive"
@@ -22,8 +22,12 @@
     <fragment
         android:id="@+id/nav_notes"
         android:name="com.example.mininotes.ui.notes.NotesFragment"
-        android:label="Notes"
-        tools:layout="@layout/fragment_notes"/>
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/nav_check"
+        android:name="com.example.mininotes.ui.check.CheckFragment"
+        android:label="@string/check_notes" />
 </navigation>
 
 

@@ -8,7 +8,8 @@ class CheckDbHelper(context: Context): SQLiteOpenHelper(context,Instance.DB_NAME
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE " + Instance.TaskEntry.TABLE + " ( "+
                 Instance.TaskEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Instance.TaskEntry.COL_TASK_TITLE + " TEXT NOT NULL);"
+                Instance.TaskEntry.COL_TASK_TITLE + " TEXT NOT NULL," +
+                Instance.TaskEntry.COL_TASK_NOTES + " TEXT NOT NULL)";
 
         db?.execSQL(createTable)
     }

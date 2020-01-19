@@ -9,6 +9,7 @@
     <string name="menu_delete">Delete</string>
     <string name="menu_archive">Archive</string>
     <string name="menu_notes">Notes</string>
+    <string name="check_notes">Check</string>
 
 
 </resources>

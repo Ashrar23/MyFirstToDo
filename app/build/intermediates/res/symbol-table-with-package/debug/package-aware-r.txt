@@ -1165,12 +1165,15 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_add
+id btn_cancel
 id buttonPanel
 id cancel_action
 id center
 id center_horizontal
 id center_vertical
 id chains
+id check
 id checkbox
 id checked
 id chronometer
@@ -1196,6 +1199,8 @@ id direct
 id disableHome
 id drawer_layout
 id edit_query
+id edtxt_note
+id edtxt_title
 id end
 id end_padder
 id enterAlways
@@ -1242,6 +1247,7 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id nav_archive
+id nav_check
 id nav_controller_view_tag
 id nav_delete
 id nav_host_fragment
@@ -1251,7 +1257,6 @@ id navigation_header_container
 id never
 id none
 id normal
-id notes
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1438,6 +1443,8 @@ layout list_items_todo
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header
+layout notepa
+layout notes_dialog
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1495,6 +1502,7 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
+string check_notes
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
