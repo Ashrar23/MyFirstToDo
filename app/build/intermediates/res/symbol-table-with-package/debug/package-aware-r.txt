@@ -1071,6 +1071,7 @@ drawable ic_add_black_24dp
 drawable ic_archive_black_24dp
 drawable ic_arrow_back_black_24dp
 drawable ic_delete_black_24dp
+drawable ic_done_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mode_edit_black_24dp
@@ -1152,6 +1153,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_text
+id action_validate
 id actions
 id activity_chooser_view_content
 id add
@@ -1165,15 +1167,12 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btn_add
-id btn_cancel
 id buttonPanel
 id cancel_action
 id center
 id center_horizontal
 id center_vertical
 id chains
-id check
 id checkbox
 id checked
 id chronometer
@@ -1199,8 +1198,6 @@ id direct
 id disableHome
 id drawer_layout
 id edit_query
-id edtxt_note
-id edtxt_title
 id end
 id end_padder
 id enterAlways
@@ -1243,11 +1240,11 @@ id media_actions
 id message
 id middle
 id mini
+id mobile_navigation
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id nav_archive
-id nav_check
 id nav_controller_view_tag
 id nav_delete
 id nav_host_fragment
@@ -1260,7 +1257,6 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id obile_navigation
 id off
 id on
 id outline
@@ -1330,6 +1326,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id task
+id task_edit_text
+id task_text
 id text
 id text2
 id textSpacerNoButtons
@@ -1344,6 +1342,7 @@ id textinput_helper_text
 id time
 id title
 id titleDividerNoCustom
+id title_edit_text
 id title_template
 id toolbar
 id top
@@ -1418,6 +1417,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_note
 layout activity_main
 layout appbar_main
 layout content_main
@@ -1443,8 +1443,6 @@ layout list_items_todo
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header
-layout notepa
-layout notes_dialog
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1466,6 +1464,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu main
 menu menu
+menu menu_add_note
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nobile_navigation
@@ -1497,6 +1496,9 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string add_note_edit_task
+string add_note_edit_title
+string add_note_validate
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

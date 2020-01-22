@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\layout\\notification_template_custom_big.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\layout\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_add_black_24dp.png.flat",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_close_circle.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\ic_mtrl_chip_close_circle.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_delete_black_24dp.png.flat",
         "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_close_circle.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\ic_mtrl_chip_close_circle.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_check_material_anim.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -236,12 +236,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -252,12 +252,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable-xhdpi-v4\\design_ic_visibility_off.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable-mdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable-xhdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -276,12 +276,16 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_done_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_delete_black_24dp.png.flat",
@@ -354,6 +358,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_done_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -960,10 +968,6 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_notepa.xml.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\layout\\notepa.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -1128,6 +1132,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_add_note.xml.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\menu\\menu_add_note.xml"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
@@ -1194,6 +1202,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_done_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1358,10 +1370,6 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_notes_dialog.xml.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\layout\\notes_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
@@ -1624,6 +1632,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\anim\\design_snackbar_in.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_done_black_24dp.xml.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_done_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
@@ -1764,6 +1776,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\interpolator\\mtrl_fast_out_slow_in.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_done_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -1830,6 +1846,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_done_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
@@ -1938,6 +1958,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_done_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_done_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
@@ -2270,6 +2294,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_note.xml.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\src\\main\\res\\layout\\activity_add_note.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_slow_in.xml.flat",

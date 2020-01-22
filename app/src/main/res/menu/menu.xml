@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-
         <item
             android:id="@+id/nav_delete"
             android:icon="@drawable/ic_delete_black_24dp"
             android:title="Delete" />
+
         <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_mode_edit_black_24dp"
             android:title="Notes" />
 
         <item
-                android:id="@+id/archive"
+                android:id="@+id/nav_archive"
                 android:icon="@drawable/ic_archive_black_24dp"
                 android:title="Archive"/>
 
-        <item
-                android:id="@+id/check"
-                android:title="Check"/>
 
 
 </menu>

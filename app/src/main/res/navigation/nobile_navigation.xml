@@ -2,32 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/obile_navigation"
-    app:startDestination="@+id/nav_archive">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_notes">
 
     <fragment
         android:id="@+id/nav_archive"
         android:name="com.example.mininotes.ui.archive.ArchiveFragment"
         android:label="@string/menu_archive"
-        tools:layout="@layout/fragment_archive"
-
-        />
+        tools:layout="@layout/fragment_archive"/>
     <fragment
         android:id="@+id/nav_delete"
         android:name="com.example.mininotes.ui.delete.DeleteFragment"
         android:label="@string/menu_delete"
-        tools:layout="@layout/fragment_delete"
-
-        />
+        tools:layout="@layout/fragment_delete"/>
     <fragment
         android:id="@+id/nav_notes"
         android:name="com.example.mininotes.ui.notes.NotesFragment"
         android:label="@string/menu_notes"
-        tools:layout="@layout/fragment_notes" />
-    <fragment
-        android:id="@+id/nav_check"
-        android:name="com.example.mininotes.ui.check.CheckFragment"
-        android:label="@string/check_notes" />
+        tools:layout="@layout/fragment_notes"/>
+
 </navigation>
 
 

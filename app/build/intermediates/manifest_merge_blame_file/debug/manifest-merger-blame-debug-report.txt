@@ -11,7 +11,7 @@
 9-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:5:5-22:19
+11-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:5:5-21:20
 12        android:allowBackup="true"
 12-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -42,21 +42,20 @@
 25-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:16:27-74
 26            </intent-filter>
 27        </activity>
-28        <activity android:name="com.example.mininotes.NoteActivity" >
-28-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:9-21:20
-28-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:19-47
-29        </activity>
-30
-31        <provider
-31-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
-32            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-32-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
-33            android:authorities="com.example.mininotes.lifecycle-process"
-33-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
-34            android:exported="false"
-34-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
-35            android:multiprocess="true" />
-35-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
-36    </application>
-37
-38</manifest>
+28        <activity android:name="com.example.mininotes.AddNotesActivity" />
+28-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:9-53
+28-->C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:19-51
+29
+30        <provider
+30-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+31            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+31-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+32            android:authorities="com.example.mininotes.lifecycle-process"
+32-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+33            android:exported="false"
+33-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+34            android:multiprocess="true" />
+34-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+35    </application>
+36
+37</manifest>

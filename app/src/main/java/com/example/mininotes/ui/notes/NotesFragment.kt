@@ -1,70 +1,43 @@
+
 package com.example.mininotes.ui.notes
 
-import android.content.ContentValues
-import android.database.sqlite.SQLiteDatabase
+import android.app.Activity
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
+ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.Db.CheckDbHelper
-import com.example.mininotes.Db.Instance
+import com.example.mininotes.Db.TaskContract
+import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fragment_notes.*
-import kotlinx.android.synthetic.main.notes_dialog.view.*
 
 
-class NotesFragment : Fragment() {
+ class NotesFragment: Fragment(), View.OnClickListener {
     private lateinit var mHelper: CheckDbHelper
-    private lateinit var mTaskListView: ListView
-    private var mAdapter: ArrayAdapter<String>? = null
-
+    val adapter = activity?.let { MyAdapter(it, mHelper) }
+    val db = mHelper.writableDatabase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mTaskListView = view!!.findViewById(R.id.list_todo) as ListView
+        val view: View = inflater.inflate(R.layout.fragment_notes, container, false)
 
-        mHelper = activity?.let { CheckDbHelper(it) }!!
-
-       val  fab = view!!.findViewById<View>(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener(View.OnClickListener { val mDialogview = LayoutInflater.from(activity).inflate(R.layout.notes_dialog, null)
-            val dialog = this.activity?.let { it1 ->
-                AlertDialog.Builder(it1)
-                    .setTitle("Add a new task")
-                    .setView(mDialogview)
-            }
-
-            val malertdialog = dialog?.show()
-
-            mDialogview.btn_add.setOnClickListener {
-
-                malertdialog?.dismiss()
-
-                val title = mDialogview.edtxt_title.text.toString()
-                val note = mDialogview.edtxt_note.text.toString()
-                val db = mHelper.writableDatabase
-                val values = ContentValues()
-                values.put(Instance.TaskEntry.COL_TASK_TITLE, title)
-                values.put(Instance.TaskEntry.COL_TASK_NOTES, note)
-                db.insertWithOnConflict(
-                    Instance.TaskEntry.TABLE,
-                    null,
-                    values,
-                    SQLiteDatabase.CONFLICT_REPLACE
-                )
-                db.close()
-
-                updateUI()
-            } });
+        var recyclerView = view!!.findViewById(R.id.list_todo)  as RecyclerView
+        recyclerView = activity?.findViewById(R.id.list_todo) as RecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.adapter = adapter
 
 
-        return inflater.inflate(R.layout.fragment_notes, container, false)
+
+        val fab: FloatingActionButton = view.findViewById(R.id.fab)
+        fab.setOnClickListener(this)
         return view
 
 
@@ -73,39 +46,59 @@ class NotesFragment : Fragment() {
     }
 
 
+    override fun onClick(v: View?) {
 
+        when (v?.id) {
+            R.id.fab -> {
+                adapter?.addTask()
 
-
-    fun updateUI() {
-
-        val taskList = ArrayList<String>()
-        val db = mHelper.readableDatabase
-        val cursor = db.query(
-            Instance.TaskEntry.TABLE,
-            arrayOf(
-                Instance.TaskEntry._ID,
-                Instance.TaskEntry.COL_TASK_TITLE,
-                Instance.TaskEntry.COL_TASK_NOTES
-            ), null, null, null, null, null
-        )
+                val cursor = db.query(
+            TaskContract.TaskEntry.TABLE,
+            arrayOf(TaskContract.TaskEntry.ID, TaskContract.TaskEntry.COL_TASK_TITLE), null, null, null, null, null)
         while (cursor.moveToNext()) {
-            val idx = cursor.getColumnIndex(Instance.TaskEntry.COL_TASK_TITLE)
-            val idy = cursor.getColumnIndex(Instance.TaskEntry.COL_TASK_NOTES)
-            taskList.add(cursor.getString(idx))
-            taskList.add(cursor.getString(idy))
-        }
-
-        if (mAdapter == null) {
-            mAdapter =
-                activity?.let { ArrayAdapter(it, R.layout.list_items_todo, R.id.task, taskList) }
-            mTaskListView.adapter = mAdapter
-        } else {
-            mAdapter?.clear()
-            mAdapter?.addAll(taskList)
-            mAdapter?.notifyDataSetChanged()
+            val idx = cursor.getColumnIndex(TaskContract.TaskEntry.COL_TASK_TITLE)
         }
         cursor.close()
         db.close()
+
+    }
+ }
+
+
     }
 
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode != Activity.RESULT_OK)
+            return
+
+        when (requestCode)
+        {
+            42 -> {
+                val action = data?.getStringExtra("Action")
+
+                when (action) {
+                    "ADD" -> {
+                        val taskTitle = data.getStringExtra("TaskTitle")
+                        val taskText = data.getStringExtra("TaskText")
+
+                        adapter?.addTask(taskTitle, taskText)
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
 }
+
+
+
+

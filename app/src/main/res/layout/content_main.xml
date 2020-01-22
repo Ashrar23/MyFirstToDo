@@ -18,19 +18,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nobile_navigation">
-
-
-
-        <ListView
-            android:id="@+id/list_todo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        app:navGraph="@navigation/nobile_navigation"/>
 
 
 
 
-    </fragment>
+
+
+
 
 
 
