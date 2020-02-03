@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.Db.CheckDbHelper
-import com.example.mininotes.Db.TaskContract
 import com.example.mininotes.`interface`.MainInterface
 import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.R
@@ -22,6 +21,8 @@ class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
      lateinit var mHelper: CheckDbHelper
      var actionMode: ActionMode? = null
     lateinit var  adapter : MyAdapter
+    lateinit var noteadd : NotesAddTask
+
 
 
 
@@ -48,9 +49,10 @@ class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
         mHelper = CheckDbHelper(context!!)
         val  recyclerView = activity?.findViewById(R.id.list_todo) as RecyclerView?
         recyclerView?.layoutManager = LinearLayoutManager(context)
-        adapter = MyAdapter(context!!,mHelper,this)
+        noteadd = NotesAddTask(context!!,mHelper,this)
+        adapter = MyAdapter(context!!,noteadd)
         recyclerView?.adapter = adapter
-        adapter.modelList
+        noteadd.modelList
 
 
 
@@ -63,7 +65,7 @@ class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
 
         when (v?.id) {
             R.id.fab -> {
-               adapter.addTask()
+               noteadd.addTask()
 
     }
  }
@@ -82,7 +84,7 @@ class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
                     dialog.setTitle("Delete")
                     dialog.setMessage( "Are you sure to delete")
                     dialog.setPositiveButton("OK"){ _, which ->
-                        adapter.deleteTask()
+                        noteadd.deleteTask()
                      }
                     dialog.setNegativeButton("Cancel"){ _, which ->
 
@@ -149,7 +151,7 @@ class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
                         val taskTitle = this.arguments?.getString("taskTitle")
                         val taskText = this.arguments?.getString("taskText")
 
-                        adapter.addTask(taskTitle,taskText)
+                        noteadd.addTask(taskTitle,taskText)
                     }
 
                 }

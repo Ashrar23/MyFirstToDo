@@ -1,16 +1,27 @@
 package com.example.mininotes
 
+import android.content.ContentValues
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.RecyclerView
+import com.example.mininotes.Db.CheckDbHelper
+import com.example.mininotes.Db.TaskContract
 import com.example.mininotes.ui.notes.NotesFragment
+import java.text.SimpleDateFormat
+import java.util.*
 
 
-class AddNotesActivity : AppCompatActivity() {
+class AddNotesActivity  : AppCompatActivity() {
+
+    private var list = mutableListOf<MyObject>()
+
 
     var position: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,6 +108,10 @@ class AddNotesActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
 
     }
+
+
+
+
 
 
 }

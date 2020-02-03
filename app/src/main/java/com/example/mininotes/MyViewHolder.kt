@@ -4,9 +4,10 @@ import android.view.View
  import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mininotes.`interface`.ViewHolderClickListener
+import com.example.mininotes.adapter.MyAdapter
+import com.example.mininotes.ui.notes.NotesAddTask
 
-class MyViewHolder(itemView: View, val tap : ViewHolderClickListener) : RecyclerView.ViewHolder(itemView),
+class MyViewHolder(itemView: View, val tap: NotesAddTask) : RecyclerView.ViewHolder(itemView),
          View.OnLongClickListener,View.OnClickListener
 {
 
