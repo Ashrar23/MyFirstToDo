@@ -1,6 +1,5 @@
 package com.example.mininotes.adapter
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
@@ -11,11 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.*
 import com.example.mininotes.Db.CheckDbHelper
 import com.example.mininotes.Db.TaskContract
+import com.example.mininotes.`interface`.MainInterface
+import com.example.mininotes.`interface`.ViewHolderClickListener
 import com.example.mininotes.ui.notes.NotesFragment
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MyAdapter(private val context: Context, private val mHelper : CheckDbHelper) :  RecyclerView.Adapter<MyViewHolder>()  {
+class MyAdapter(private val context: Context, private val mHelper: CheckDbHelper, private val mainInterface: MainInterface) :  RecyclerView.Adapter<MyViewHolder>(),
+    ViewHolderClickListener {
 
     private var list = mutableListOf<MyObject>()
 
@@ -25,7 +27,7 @@ class MyAdapter(private val context: Context, private val mHelper : CheckDbHelpe
     }
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.list_items_todo, viewGroup, false)
-        return MyViewHolder(view)
+        return MyViewHolder(view,this)
     }
 
      override fun onBindViewHolder(myViewHolder: MyViewHolder, position: Int) {
@@ -83,7 +85,7 @@ class MyAdapter(private val context: Context, private val mHelper : CheckDbHelpe
 
 
 
-    fun addTask(taskTitle : String, taskText: String) {
+    fun addTask(taskTitle: String?, taskText: String?) {
         val values = ContentValues()
 
         val sdf = SimpleDateFormat("dd/MM/yyyy/", Locale.US)
@@ -116,16 +118,16 @@ class MyAdapter(private val context: Context, private val mHelper : CheckDbHelpe
     fun addTask() {
         val test: Activity = context as Activity
 
-        test.launchActivity<NotesFragment>(42) {
+        test.launchActivity<AddNotesActivity>(42) {
 
         }
     }
 
-    fun deleteTask(taskId: String) {
+    fun deleteTask() {
 
         val db = mHelper.readableDatabase
         db.delete(TaskContract.TaskEntry.TABLE,
-            "id=" + taskId, null)
+            "id=" + deleteSelectedIds(), null)
         db.close()
     }
 
@@ -169,4 +171,50 @@ class MyAdapter(private val context: Context, private val mHelper : CheckDbHelpe
         }
         db.close()
     }
+
+    override fun onLongTap(index: Int) {
+        if (!NotesFragment.isMultiSelectOn) {
+            NotesFragment.isMultiSelectOn = true
+        }
+        addIDIntoSelectedIds(index)    }
+
+    override fun onTap(index: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    fun addIDIntoSelectedIds(index: Int) {
+        val id = modelList[index].ID
+        if (selectedIds.contains(id))
+            selectedIds.remove(id)
+        else
+            selectedIds.add(id)
+
+        notifyItemChanged(index)
+        if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
+        mainInterface.mainInterface(selectedIds.size)
+
+    }
+
+    fun deleteSelectedIds() {
+        if (selectedIds.size < 1)  return
+        val selectedIdIteration =  selectedIds.listIterator()
+        while (selectedIdIteration.hasNext()) {
+            val selectedItemID = selectedIdIteration.next()
+            var indexOfModelList = 0
+            val modelListIteration: MutableListIterator<MyObject> = modelList.listIterator();
+            while (modelListIteration.hasNext()) {
+                val model = modelListIteration.next()
+                if (selectedItemID.equals(model.ID)) {
+                    modelListIteration.remove()
+                    selectedIdIteration.remove()
+                    notifyItemRemoved(indexOfModelList)
+                }
+                indexOfModelList++
+
+            }
+            NotesFragment.isMultiSelectOn = false
+        }
+    }
+    var modelList: MutableList<MyObject> = ArrayList<MyObject>()
+    val selectedIds: MutableList<String> = ArrayList<String>()
 }

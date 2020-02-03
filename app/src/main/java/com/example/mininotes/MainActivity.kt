@@ -1,26 +1,34 @@
 package com.example.mininotes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.mininotes.Db.CheckDbHelper
+import com.example.mininotes.ui.archive.ArchiveFragment
+import com.example.mininotes.ui.delete.DeleteFragment
+import com.example.mininotes.ui.notes.NotesFragment
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.appbar_main.*
 
-class MainActivity : AppCompatActivity()  {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var mHelper: CheckDbHelper
-    private lateinit var mTaskListView: ListView
-    private var mAdapter: ArrayAdapter<String>? = null
-    private lateinit var appBarConfiguration: AppBarConfiguration
+
+    lateinit var notesFragment: NotesFragment
+    lateinit var deleteFragment: DeleteFragment
+    lateinit var archiveFragment: ArchiveFragment
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,40 +38,85 @@ class MainActivity : AppCompatActivity()  {
         setSupportActionBar(toolbar)
 
 
+        val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
+            this,
+            drawer_layout,
+            toolbar,
+            (R.string.navigation_drawer_open),
+            (R.string.navigation_drawer_close)
+        ) {
+        }
+        drawerToggle.isDrawerIndicatorEnabled = true
+        drawer_layout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
 
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = this.findViewById(R.id.nav_view)
-        val navController = findNavController(R.id.nav_host_fragment)
+        nav_view.setNavigationItemSelectedListener(this)
 
 
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_archive,R.id.nav_notes, R.id.nav_delete
-             ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-
+        toolbar.setTitle("Notes")
+        notesFragment = NotesFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.frame_lyout, notesFragment)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
 
 
     }
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.main, menu)
+
+    override fun onNavigationItemSelected(menuitem: MenuItem): Boolean {
+        when (menuitem.itemId) {
+
+            R.id.nav_notes -> {
+                toolbar.setTitle("Notes")
+                notesFragment = NotesFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_lyout, notesFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+            }
+
+            R.id.nav_archive -> {
+                toolbar.setTitle("Archive")
+                archiveFragment = ArchiveFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_lyout, archiveFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+            }
+
+            R.id.nav_delete -> {
+                toolbar.setTitle("Delete")
+                deleteFragment = DeleteFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_lyout, deleteFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+            }
+
+        }
+
+        drawer_layout.closeDrawer(GravityCompat.START)
         return true
+
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+
+
     }
-
-
-
-
-
-
 }
+
+
+
 
 
 

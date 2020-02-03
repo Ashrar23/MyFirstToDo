@@ -12,11 +12,23 @@ class CheckDbHelper(context: Context): SQLiteOpenHelper(context,TaskContract.DB_
                 TaskContract.TaskEntry.COL_TASK_TEXT + " TEXT NOT NULL, " +
                 TaskContract.TaskEntry.COL_TASK_DATE + " TEXT NOT NULL);"
 
+        val archiveTable = "ARCHIVE TABLE " + TaskContract.TaskEntry.TABLEARCHIVE + " (" +
+                TaskContract.TaskEntry.ID + " INTEGER, " +
+                TaskContract.TaskEntry.COL_TASK_TITLE + " TEXT NOT NULL, " +
+                TaskContract.TaskEntry.COL_TASK_TEXT + " TEXT NOT NULL, " +
+                TaskContract.TaskEntry.COL_TASK_DATE + " TEXT NOT NULL);"
+
+
+
         db?.execSQL(createTable)
+        db?.execSQL(archiveTable)
     }
+
+
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS " + TaskContract.TaskEntry.TABLE)
+        db?.execSQL("DROP TABLE IF EXISTS" +  TaskContract.TaskEntry.TABLEARCHIVE)
         onCreate(db)
 
     }

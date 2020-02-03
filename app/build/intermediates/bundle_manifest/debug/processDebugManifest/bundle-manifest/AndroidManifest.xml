@@ -25,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mininotes.AddNotesActivity" />
+        <activity android:name="com.example.mininotes.AddNotesActivity" >
+        </activity>
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"

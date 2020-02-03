@@ -13,6 +13,7 @@ class TaskContract {
 
         companion object {
             val TABLE: String = "tasks"
+            val TABLEARCHIVE : String = "archive"
 
             var ID: String = "id"
             val COL_TASK_TITLE: String = "title"
