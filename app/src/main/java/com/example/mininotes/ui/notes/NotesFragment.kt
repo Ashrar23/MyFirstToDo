@@ -1,168 +1,185 @@
 
 package com.example.mininotes.ui.notes
 
-import android.app.Activity
 import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mininotes.Db.CheckDbHelper
-import com.example.mininotes.`interface`.MainInterface
-import com.example.mininotes.adapter.MyAdapter
+import com.example.mininotes.AddNotesActivity
+import com.example.mininotes.Db.Databasehelper
+import com.example.mininotes.Interface.MainInterface
+import com.example.mininotes.MainActivity
+import com.example.mininotes.MyObject
+ import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class NotesFragment: Fragment(), View.OnClickListener, MainInterface  {
+class NotesFragment: Fragment(),MainInterface {
 
-     lateinit var mHelper: CheckDbHelper
-     var actionMode: ActionMode? = null
-    lateinit var  adapter : MyAdapter
-    lateinit var noteadd : NotesAddTask
-
+    lateinit var mHelper: Databasehelper
+    lateinit var adapter: MyAdapter
+    lateinit var recyclerView: RecyclerView
 
 
+    var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
 
-    companion object {
-         var isMultiSelectOn = false
-
-     }
+    var actionMode : ActionMode? = null
 
 
     override fun mainInterface(size: Int) {
-        if (actionMode == null) actionMode = activity?.startActionMode(ActionModeCallback())
+        if (actionMode == null) actionMode = view?.startActionMode(ActionModeCallback())
         if (size > 0) actionMode?.setTitle("$size item selected")
-        else actionMode?.finish()
-    }
+        else actionMode?.finish()     }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_notes, container, false)
+
 
         isMultiSelectOn = false
-        mHelper = CheckDbHelper(context!!)
-        val  recyclerView = activity?.findViewById(R.id.list_todo) as RecyclerView?
-        recyclerView?.layoutManager = LinearLayoutManager(context)
-        noteadd = NotesAddTask(context!!,mHelper,this)
-        adapter = MyAdapter(context!!,noteadd)
-        recyclerView?.adapter = adapter
-        noteadd.modelList
 
+        val view: View = inflater.inflate(R.layout.fragment_notes, container, false)
+        setHasOptionsMenu(true)
+         recyclerView = view.findViewById(R.id.list_todo)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        mHelper = Databasehelper(context!!)
 
-
-
-        val fab: FloatingActionButton = view.findViewById(R.id.fab)
-        fab.setOnClickListener(this)
         return view
     }
-    override fun onClick(v: View?) {
 
-        when (v?.id) {
-            R.id.fab -> {
-               noteadd.addTask()
+    private fun readData() {
+        val list = mHelper.user
+
+        hashMapArrayList.clear()
+        if (list != null && list.size > 0) {
+
+            for (user: MyObject in list) {
+                val hashMap = HashMap<String, String>()
+                hashMap.put(ID, user.id.toString())
+                hashMap.put(COL_TASK_TITLE, user.title)
+                hashMap.put(COL_TASK_TEXT, user.text)
+                hashMap.put(COL_TASK_DATE, user.record)
+
+                hashMapArrayList.add(hashMap)
+            }
+            adapter = MyAdapter((context as MainActivity?)!!, this, hashMapArrayList)
+            recyclerView.adapter = adapter
+
+
+        }
+
 
     }
- }
 
 
+
+
+    override fun onResume() {
+        readData()
+        super.onResume()
     }
 
-    inner class ActionModeCallback : ActionMode.Callback{
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.insert_data, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.insert->{
+                val intent=Intent(activity,AddNotesActivity::class.java)
+                activity?.startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
+
+    inner class ActionModeCallback : ActionMode.Callback {
         var shouldResetRecyclerView = true
 
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
-            when (item?.getItemId()) {
-                R.id.nav_delete -> {
+            when (item?.itemId) {
 
-                    val dialog = AlertDialog.Builder(activity)
-                    dialog.setTitle("Delete")
-                    dialog.setMessage( "Are you sure to delete")
-                    dialog.setPositiveButton("OK"){ _, which ->
-                        noteadd.deleteTask()
-                     }
-                    dialog.setNegativeButton("Cancel"){ _, which ->
+                R.id.action_delete -> {
+                    val builder = AlertDialog.Builder(activity)
+                    builder.setTitle("Delete item")
+                    builder.setMessage("deleted file may not be restore")
+                     builder.setPositiveButton("Yes") { dialog: DialogInterface?, which: Int ->
+
+
+
+                        Toast.makeText(activity, "deleted successfully", Toast.LENGTH_LONG)
+                            .show()                    }
+
+                    builder.setNegativeButton("No") { dialog: DialogInterface?, which: Int ->
+
+
 
                     }
-                    shouldResetRecyclerView = false
-                    actionMode?.finish()
-                    return true
+                    val alertDialog: AlertDialog = builder.create()
+                    alertDialog.setCancelable(false)
+                    alertDialog.show()
 
+                }
+
+                R.id.acton_archive -> {
 
                 }
 
-                R.id.nav_archive -> {
-
-                    shouldResetRecyclerView = false
-                    actionMode?.finish()
-                    return true
-
-                }
             }
-
-
-
-            return false           }
+            return false
+        }
 
         override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
             val inflater = mode?.getMenuInflater()
-            inflater?.inflate(R.menu.menu, menu)
+            inflater?.inflate(R.menu.delete, menu)
             return true
-
         }
 
         override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
             menu?.findItem(R.id.nav_delete)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-            menu?.findItem(R.id.nav_archive)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
             return true
         }
 
         override fun onDestroyActionMode(mode: ActionMode?) {
             if (shouldResetRecyclerView) {
+                adapter.selectedIds.clear()
                 adapter.notifyDataSetChanged()
             }
             isMultiSelectOn = false
             actionMode = null
-            shouldResetRecyclerView = true            }
+            shouldResetRecyclerView = true
+        }
+
 
 
     }
 
+    companion object{
+        var ID: String = "id"
+        val COL_TASK_TITLE: String = "title"
+        val COL_TASK_TEXT: String = "text"
+        val COL_TASK_DATE: String = "date"
+
+        var isMultiSelectOn = false
 
 
-
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode != Activity.RESULT_OK)
-            return
-
-        when (requestCode)
-        {
-            42 -> {
-                val action = data?.getStringExtra("Action")
-
-                when (action) {
-                    "ADD" -> {
-                        val taskTitle = this.arguments?.getString("taskTitle")
-                        val taskText = this.arguments?.getString("taskText")
-
-                        noteadd.addTask(taskTitle,taskText)
-                    }
-
-                }
-            }
-        }
     }
 
 
 
 }
-
 
 
 

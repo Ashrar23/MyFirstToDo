@@ -1144,6 +1144,7 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_delete
 id action_divider
 id action_image
 id action_menu_divider
@@ -1153,9 +1154,9 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_text
-id action_validate
 id actions
 id activity_chooser_view_content
+id acton_archive
 id add
 id alertTitle
 id all
@@ -1205,7 +1206,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1225,6 +1225,7 @@ id ifRoom
 id image
 id imageView
 id info
+id insert
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1293,6 +1294,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id select
 id select_dialog_listview
 id selected
 id shortcut
@@ -1345,7 +1347,6 @@ id titleDividerNoCustom
 id title_edit_text
 id title_template
 id toolbar
-id toolbar2
 id top
 id topPanel
 id touch_outside
@@ -1354,10 +1355,12 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id txt_time
 id unchecked
 id uniform
 id unlabeled
 id up
+id update_btn
 id useLogo
 id view_offset_helper
 id visible
@@ -1420,6 +1423,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_note
 layout activity_main
+layout activity_update_note
 layout appbar_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1462,9 +1466,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu delete
+menu insert_data
 menu main
 menu menu
-menu menu_add_note
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

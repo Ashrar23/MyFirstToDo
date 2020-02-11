@@ -1,3 +1,8 @@
 package com.example.mininotes
 
-class MyObject(var ID: String, var title: String?, var text: String?, var date: String)
+class MyObject {
+    var id: Int =0
+    var title: String = ""
+    var text: String = ""
+    var record: String = ""
+}

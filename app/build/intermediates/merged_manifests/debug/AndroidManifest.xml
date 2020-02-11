@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="com.example.mininotes.AddNotesActivity" >
         </activity>
+        <activity android:name="com.example.mininotes.UpdateNotesActivity" >
+        </activity>
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
