@@ -16,6 +16,8 @@ class MyViewHolder (itemView: View , val tap : ViewHolderClickListner) : Recycle
     val card = itemView.findViewById<CardView>(R.id.card)
     val check = itemView.findViewById<ConstraintLayout>(R.id.select)
 
+    val delete = itemView.findViewById<Button>(R.id.action_delete)
+
 
 
     init {

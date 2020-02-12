@@ -1,4 +1,4 @@
-#Tue Feb 11 15:19:28 IST 2020
+#Wed Feb 12 16:52:36 IST 2020
 base.0=C\:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

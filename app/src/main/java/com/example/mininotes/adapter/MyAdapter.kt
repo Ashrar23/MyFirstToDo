@@ -21,10 +21,7 @@ import com.example.mininotes.ui.notes.NotesFragment
 
 class MyAdapter(val context: Context, val mainInterface: MainInterface,val arrayList: ArrayList<HashMap<String,String>>) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
 
-          lateinit var mHelper:Databasehelper
-
-
-
+             lateinit var mHelper:Databasehelper
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
@@ -57,6 +54,7 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
             context.startActivity(intent)
 
         }
+
 
 
     }
@@ -93,6 +91,19 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
           if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
           mainInterface.mainInterface(selectedIds.size)
       }
+
+    fun deleteSelectedIds(position: Int) {
+            val result : Boolean = mHelper.delete(Integer.parseInt(arrayList.get(position).get(ID).toString()))
+
+        when{
+            result -> {
+                Toast.makeText(context,"Data deleted Successfully..", Toast.LENGTH_LONG).show()
+                val intent = Intent(context, context::class.java)
+                context.startActivity(intent)
+            }
+            else -> Toast.makeText(context,"Failed to delete data", Toast.LENGTH_LONG).show()
+        }
+    }
 
 
     val selectedIds: MutableList<String> = java.util.ArrayList<String>()

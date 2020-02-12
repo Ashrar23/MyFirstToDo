@@ -76,6 +76,8 @@ class NotesFragment: Fragment(),MainInterface {
         }
 
 
+
+
     }
 
 
@@ -97,6 +99,7 @@ class NotesFragment: Fragment(),MainInterface {
             R.id.insert->{
                 val intent=Intent(activity,AddNotesActivity::class.java)
                 activity?.startActivity(intent)
+                actionMode?.finish()
             }
         }
         return super.onOptionsItemSelected(item)
@@ -116,15 +119,13 @@ class NotesFragment: Fragment(),MainInterface {
                     builder.setTitle("Delete item")
                     builder.setMessage("deleted file may not be restore")
                      builder.setPositiveButton("Yes") { dialog: DialogInterface?, which: Int ->
-
-
-
-                        Toast.makeText(activity, "deleted successfully", Toast.LENGTH_LONG)
+                         adapter.deleteSelectedIds(0)
+                         Toast.makeText(activity, "deleted successfully", Toast.LENGTH_LONG)
                             .show()                    }
 
                     builder.setNegativeButton("No") { dialog: DialogInterface?, which: Int ->
 
-
+                            actionMode?.finish()
 
                     }
                     val alertDialog: AlertDialog = builder.create()
@@ -134,6 +135,8 @@ class NotesFragment: Fragment(),MainInterface {
                 }
 
                 R.id.acton_archive -> {
+
+
 
                 }
 
