@@ -12,16 +12,17 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.*
 import com.example.mininotes.Db.Databasehelper
-import com.example.mininotes.Db.Databasehelper.Companion.COL_TASK_DATE
-import com.example.mininotes.Db.Databasehelper.Companion.COL_TASK_TEXT
-import com.example.mininotes.Db.Databasehelper.Companion.COL_TASK_TITLE
 import com.example.mininotes.Interface.MainInterface
 import com.example.mininotes.Interface.ViewHolderClickListner
 import com.example.mininotes.ui.notes.NotesFragment
 
-class MyAdapter(val context: Context, val mainInterface: MainInterface,val arrayList: ArrayList<HashMap<String,String>>) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
+class MyAdapter(val context: Context,val arrayList: ArrayList<HashMap<String,String>>,val mainInterface: MainInterface) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
 
              lateinit var mHelper:Databasehelper
+
+
+
+
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
@@ -31,6 +32,7 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
 
         val id = arrayList.get(position).get(ID)
         if (selectedIds.contains(id)) {
@@ -45,7 +47,8 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
         mHelper = Databasehelper(context)
 
 
-        holder.card.setOnClickListener{
+        holder.titleView.setOnClickListener{
+
             val intent = Intent(context,UpdateNotesActivity::class.java)
             intent.putExtra(ID,arrayList.get(position).get(ID))
             intent.putExtra(COL_TASK_TITLE,arrayList.get(position).get(COL_TASK_TITLE))
@@ -54,6 +57,8 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
             context.startActivity(intent)
 
         }
+
+
 
 
 
@@ -69,6 +74,7 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
         }
         addIDIntoSelectedIds(index)
 
+
     }
 
     override fun onTap(index: Int) {
@@ -80,38 +86,59 @@ class MyAdapter(val context: Context, val mainInterface: MainInterface,val array
         }
      }
 
-      fun addIDIntoSelectedIds(position: Int) {
-          val id = arrayList.get(position).get(ID).toString()
-          if (selectedIds.contains(id))
-              selectedIds.remove(id)
-          else
-              selectedIds.add(id)
 
-          notifyItemChanged(position)
-          if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
-          mainInterface.mainInterface(selectedIds.size)
-      }
+    fun deleteSelectedId() {
+        if (selectedIds.size < 1)  return
+        val selectedIdIteration =  selectedIds.listIterator()
+        while (selectedIdIteration.hasNext()) {
+            val selectedItemID = selectedIdIteration.next()
+            var indexOfModelList = 0
+            val modelListIteration: MutableListIterator<HashMap<String,String>> = arrayList.listIterator();
+            while (modelListIteration.hasNext()) {
+                val model = modelListIteration.next()
+                if (selectedItemID.equals(model.get(ID))) {
+                    modelListIteration.remove()
+                    selectedIdIteration.remove()
+                    mHelper.delete(selectedItemID.toInt())
+                    notifyItemRemoved(indexOfModelList)
+                }
+                indexOfModelList++
 
-    fun deleteSelectedIds(position: Int) {
-            val result : Boolean = mHelper.delete(Integer.parseInt(arrayList.get(position).get(ID).toString()))
-
-        when{
-            result -> {
-                Toast.makeText(context,"Data deleted Successfully..", Toast.LENGTH_LONG).show()
-                val intent = Intent(context, context::class.java)
-                context.startActivity(intent)
             }
-            else -> Toast.makeText(context,"Failed to delete data", Toast.LENGTH_LONG).show()
+            NotesFragment.isMultiSelectOn = false
         }
     }
 
+    fun archive(){
+
+    }
+
+
+    fun addIDIntoSelectedIds(position: Int) {
+        val id = arrayList.get(position).get(ID).toString()
+        if (selectedIds.contains(id))
+            selectedIds.remove(id)
+        else
+            selectedIds.add(id)
+
+        notifyItemChanged(position)
+        if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
+        mainInterface.mainInterface(selectedIds.size)
+    }
 
     val selectedIds: MutableList<String> = java.util.ArrayList<String>()
-companion object
+
+
+
+
+    companion object
 {
     var ID: String = "id"
     val COL_TASK_TITLE: String = "title"
     val COL_TASK_TEXT: String = "text"
     val COL_TASK_DATE: String = "date"
+
+
+
 }
 }

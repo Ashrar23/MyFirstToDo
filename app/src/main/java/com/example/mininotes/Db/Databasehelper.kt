@@ -84,11 +84,15 @@ class Databasehelper(context: Context): SQLiteOpenHelper(context,DB_NAME,null,DB
     }
 
     fun delete(id: Int): Boolean {
-        val db = this.readableDatabase
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put(ID,id)
         val success = db.delete(TABLE, ID + "=?", arrayOf(id.toString())).toLong()
         db.close()
         return Integer.parseInt("$success") != -1
     }
+
+
 
 
     companion object {
