@@ -1,4 +1,3 @@
-
 package com.example.mininotes.ui.notes
 
 import android.app.AlertDialog
@@ -15,12 +14,12 @@ import com.example.mininotes.Db.Databasehelper
 import com.example.mininotes.Interface.MainInterface
 import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
- import com.example.mininotes.adapter.MyAdapter
+import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class NotesFragment: Fragment(),MainInterface {
+class NotesFragment : Fragment(), MainInterface {
 
     lateinit var mHelper: Databasehelper
     lateinit var adapter: MyAdapter
@@ -29,13 +28,14 @@ class NotesFragment: Fragment(),MainInterface {
 
     var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
 
-    var actionMode : ActionMode? = null
+    var actionMode: ActionMode? = null
 
 
     override fun mainInterface(size: Int) {
         if (actionMode == null) actionMode = view?.startActionMode(ActionModeCallback())
         if (size > 0) actionMode?.setTitle("$size item selected")
-        else actionMode?.finish()     }
+        else actionMode?.finish()
+    }
 
 
     override fun onCreateView(
@@ -48,18 +48,20 @@ class NotesFragment: Fragment(),MainInterface {
 
         val view: View = inflater.inflate(R.layout.fragment_notes, container, false)
         setHasOptionsMenu(true)
-         recyclerView = view.findViewById(R.id.list_todo)
+        recyclerView = view.findViewById(R.id.list_todo)
         recyclerView.layoutManager = LinearLayoutManager(activity)
         mHelper = Databasehelper(context!!)
+
+        // readData()
 
         val fab = view.findViewById<FloatingActionButton>(R.id.fab)
 
 
         fab.setOnClickListener {
-                val intent = Intent(activity,AddNotesActivity::class.java)
-                startActivity(intent)
+            val intent = Intent(activity, AddNotesActivity::class.java)
+            startActivity(intent)
+        }
 
-            }
 
         return view
     }
@@ -79,7 +81,7 @@ class NotesFragment: Fragment(),MainInterface {
 
                 hashMapArrayList.add(hashMap)
             }
-            adapter = MyAdapter((context as MainActivity?)!!,hashMapArrayList,this)
+            adapter = MyAdapter((context as MainActivity?)!!, hashMapArrayList, this)
             recyclerView.adapter = adapter
 
 
@@ -100,23 +102,22 @@ class NotesFragment: Fragment(),MainInterface {
             when (item?.itemId) {
 
                 R.id.action_delete -> {
+
                     val builder = AlertDialog.Builder(activity)
                     builder.setTitle("Delete item")
                     builder.setMessage("deleted file may not be restore")
-                     builder.setPositiveButton("Yes") { dialog: DialogInterface?, which: Int ->
-                         shouldResetRecyclerView = false
-                         val user = MyObject()
-                        val id = user.id
-                          adapter.deleteSelectedId()
-                         
-                         actionMode?.finish()
+                    builder.setPositiveButton("Yes") { dialog: DialogInterface?, which: Int ->
+                        shouldResetRecyclerView = false
+                        adapter.deleteSelectedId()
+                        actionMode?.finish()
 
-                          Toast.makeText(activity, "deleted successfully", Toast.LENGTH_LONG)
-                            .show()                    }
+                        Toast.makeText(activity, "deleted successfully", Toast.LENGTH_LONG)
+                            .show()
+                    }
 
                     builder.setNegativeButton("No") { dialog: DialogInterface?, which: Int ->
 
-                            actionMode?.finish()
+                        actionMode?.finish()
 
                     }
                     val alertDialog: AlertDialog = builder.create()
@@ -126,11 +127,8 @@ class NotesFragment: Fragment(),MainInterface {
                 }
 
                 R.id.acton_archive -> {
-
-
-
-
-
+                    adapter.archiveselectedIds()
+                    actionMode?.finish()
 
                 }
 
@@ -145,13 +143,14 @@ class NotesFragment: Fragment(),MainInterface {
         }
 
         override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-            menu?.findItem(R.id.nav_delete)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+            menu?.findItem(R.id.action_delete)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+            menu?.findItem(R.id.acton_archive)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
             return true
         }
 
         override fun onDestroyActionMode(mode: ActionMode?) {
             if (shouldResetRecyclerView) {
-                adapter .selectedIds.clear()
+                adapter.selectedIds.clear()
                 adapter.notifyDataSetChanged()
             }
             isMultiSelectOn = false
@@ -162,7 +161,7 @@ class NotesFragment: Fragment(),MainInterface {
 
     }
 
-    companion object{
+    companion object {
         var ID: String = "id"
         val COL_TASK_TITLE: String = "title"
         val COL_TASK_TEXT: String = "text"
@@ -171,9 +170,7 @@ class NotesFragment: Fragment(),MainInterface {
         var isMultiSelectOn = false
 
 
-
     }
-
 
 
 }

@@ -16,8 +16,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.mininotes.ui.archive.ArchiveFragment
-import com.example.mininotes.ui.delete.DeleteFragment
-import com.example.mininotes.ui.notes.NotesFragment
+ import com.example.mininotes.ui.notes.NotesFragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.appbar_main.*
@@ -26,8 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     lateinit var notesFragment: NotesFragment
-    lateinit var deleteFragment: DeleteFragment
-    lateinit var archiveFragment: ArchiveFragment
+     lateinit var archiveFragment: ArchiveFragment
 
 
 
@@ -87,16 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                      .commit()
             }
 
-            R.id.nav_delete -> {
-                toolbar.setTitle("Delete")
-                deleteFragment = DeleteFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frame_lyout, deleteFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .addToBackStack(null)
-                     .commit()
-            }
+
 
         }
 

@@ -45,14 +45,22 @@ class AddNotesActivity  : AppCompatActivity() {
                 val currentDate = sdf.format(Date())
 
 
-                val tasktitle = edttitle.text.toString()
+                var tasktitle = edttitle.text.toString()
                 val tasktext = edttask.text.toString()
+
+                if (tasktitle.isEmpty() && tasktext.isEmpty())
+                {
+                    Toast.makeText(this, "Note is empty", Toast.LENGTH_SHORT).show()
+                }
+                else if (tasktitle.isEmpty())
+                    tasktitle = tasktext
 
 
                 val task = MyObject()
                 task.title = tasktitle
                 task.text = tasktext
                 task.record = currentDate
+
 
 
                 val result : Boolean = dbHelper.onStoreData(task)

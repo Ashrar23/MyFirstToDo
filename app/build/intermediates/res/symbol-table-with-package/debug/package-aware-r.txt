@@ -1061,6 +1061,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cardborder
+drawable cardborderselect
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1078,6 +1079,7 @@ drawable ic_mode_edit_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_unarchive_black_24dp
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1154,6 +1156,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_text
+id action_unarchive
 id actions
 id activity_chooser_view_content
 id acton_archive
@@ -1237,7 +1240,6 @@ id line1
 id line3
 id listMode
 id list_archive
-id list_delete
 id list_item
 id list_todo
 id masked
@@ -1250,7 +1252,6 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id nav_archive
 id nav_controller_view_tag
-id nav_delete
 id nav_notes
 id nav_view
 id navigation_header_container
@@ -1442,7 +1443,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_archive
-layout fragment_delete
 layout fragment_notes
 layout list_items_todo
 layout mtrl_layout_snackbar
@@ -1471,6 +1471,7 @@ menu delete
 menu insert_data
 menu main
 menu menu
+menu unarchive
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

@@ -3,8 +3,7 @@
 
     <item
         android:id="@+id/insert"
-        android:icon="@android:drawable/ic_input_add"
-        android:title="Insert data" />
+         android:title="Insert data" />
 
 
 
