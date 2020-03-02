@@ -1,15 +1,17 @@
 package com.example.mininotes
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mininotes.Db.Databasehelper
+import com.example.mininotes.Interface.MainInterface
 import java.text.SimpleDateFormat
 import java.util.*
 
-class UpdateNotesActivity : AppCompatActivity () {
+class UpdateNotesActivity(val mainInterface: MainInterface) : Activity () {
 
     lateinit var update : Button
     lateinit var edttitle : EditText
@@ -36,7 +38,7 @@ class UpdateNotesActivity : AppCompatActivity () {
         edttask=findViewById(R.id.task_edit_text)
 
 
-        databaseHelper= Databasehelper(this)
+        databaseHelper= Databasehelper(this,mainInterface)
 
         id = intent?.getStringExtra(ID).toString()
         edttitle.setText(intent.getStringExtra(COL_TASK_TITLE))

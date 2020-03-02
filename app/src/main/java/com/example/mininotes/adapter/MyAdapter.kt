@@ -1,9 +1,7 @@
 package com.example.mininotes.adapter
 
-import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,10 +9,8 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.Db.Databasehelper
-import com.example.mininotes.Db.Databasehelper.Companion.TABLEARCHIVE
 import com.example.mininotes.Interface.MainInterface
 import com.example.mininotes.Interface.ViewHolderClickListner
-import com.example.mininotes.MyObject
 import com.example.mininotes.MyViewHolder
 import com.example.mininotes.R
 import com.example.mininotes.UpdateNotesActivity
@@ -30,7 +26,6 @@ class MyAdapter(
 ) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
 
     lateinit var mHelper: Databasehelper
-
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
@@ -53,7 +48,7 @@ class MyAdapter(
         holder.titleView.text = arrayList.get(position).get(COL_TASK_TITLE)
         holder.textView.text = arrayList.get(position).get(COL_TASK_TEXT)
         holder.time.text = arrayList.get(position).get(COL_TASK_DATE)
-        mHelper = Databasehelper(context)
+        mHelper = Databasehelper(context,mainInterface)
 
 
         holder.titleView.setOnClickListener {
@@ -66,6 +61,9 @@ class MyAdapter(
             context.startActivity(intent)
 
         }
+
+       val lastSelectedPosition = holder.getAdapterPosition();
+
 
 
     }
@@ -112,6 +110,9 @@ class MyAdapter(
         }
     }
 
+
+
+
     fun archiveselectedIds() {
 
         if (selectedIds.size < 1) return
@@ -125,10 +126,10 @@ class MyAdapter(
                 val model = modelListIterator.next()
                 if (selectedItemId.equals(model.get(ID))) {
                     modelListIterator.remove()
-                    selectedIdIteration.remove()
-                    //mHelper.getselectedid(selectedItemId.toInt())
-                        mHelper.archive(selectedItemId.toInt())
-                        mHelper.delete(selectedItemId.toInt())
+                    selectedIdIteration.nextIndex()
+
+                        mHelper.archive(mHelper.getselectedid)
+                      //mHelper.delete(selectedItemId.toInt())
                         notifyItemRemoved(indexModelList)
                 }
                 indexModelList++
@@ -137,15 +138,20 @@ class MyAdapter(
         }
     }
 
+
     fun addIDIntoSelectedIds(position: Int) {
-        val id = arrayList.get(position).get(ID).toString()
-        if (selectedIds.contains(id))
+        val  id = arrayList.get(position).get(ID).toString()
+        if (selectedIds.contains(id)) {
             selectedIds.remove(id)
-        else
+        }else{
             selectedIds.add(id)
         notifyItemChanged(position)
+        }
         if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
         mainInterface.mainInterface(selectedIds.size)
+
+
+
     }
 
     val selectedIds: MutableList<String> = java.util.ArrayList<String>()
@@ -156,33 +162,10 @@ class MyAdapter(
         val COL_TASK_TEXT: String = "text"
         val COL_TASK_DATE: String = "date"
 
-        val TABLE: String = "tasks"
-
-
     }
 
 
-    val getselectedid : List<MyObject>
-        get()
-        {
-            val userList = ArrayList<MyObject>()
-            val id = selectedIds
-            val db = mHelper.getReadableDatabase()
-            val selectQuery = "SELECT * FROM $TABLE WHERE  $id"
-            val cursor = db.rawQuery(selectQuery, null)
-            if (cursor != null && cursor.moveToFirst()) {
-                do {
-                    val user = MyObject()
-                    user.id = cursor.getInt(cursor.getColumnIndex(ID))
-                    user.title = cursor.getString(cursor.getColumnIndex(COL_TASK_TITLE))
-                    user.text = cursor.getString(cursor.getColumnIndex(COL_TASK_TEXT))
-                    user.record = cursor.getString(cursor.getColumnIndex(COL_TASK_DATE))
-                    userList.add(user)
-                    notifyDataSetChanged()
-                } while (cursor.moveToNext())
-            }
-            return userList
-        }
+
 
 
 }

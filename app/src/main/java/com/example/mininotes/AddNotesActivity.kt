@@ -6,11 +6,12 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mininotes.Db.Databasehelper
+import com.example.mininotes.Interface.MainInterface
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class AddNotesActivity  : AppCompatActivity() {
+class AddNotesActivity(val mainInterface: MainInterface)  : AppCompatActivity() {
 
     lateinit var save : Button
     lateinit var edttitle : EditText
@@ -29,7 +30,7 @@ class AddNotesActivity  : AppCompatActivity() {
             edttitle = findViewById(R.id.title_edit_text)
             edttask = findViewById(R.id.task_edit_text)
 
-            dbHelper = Databasehelper(this)
+            dbHelper = Databasehelper(this,mainInterface)
 
 
             save.setOnClickListener{
@@ -51,10 +52,13 @@ class AddNotesActivity  : AppCompatActivity() {
                 if (tasktitle.isEmpty() && tasktext.isEmpty())
                 {
                     Toast.makeText(this, "Note is empty", Toast.LENGTH_SHORT).show()
-                }
-                else if (tasktitle.isEmpty())
-                    tasktitle = tasktext
 
+                    return
+                }
+                else if (tasktitle.isEmpty()){
+
+                      tasktitle = tasktext
+                }
 
                 val task = MyObject()
                 task.title = tasktitle

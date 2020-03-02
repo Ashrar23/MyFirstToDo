@@ -2,20 +2,22 @@ package com.example.mininotes.Db
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.mininotes.Interface.MainInterface
+import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
+import com.example.mininotes.MyViewHolder
 import com.example.mininotes.adapter.MyAdapter
+import com.example.mininotes.ui.notes.NotesFragment
 import java.util.*
 
 
-
-
-
-class Databasehelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+class Databasehelper(val context: Context, val mainInterface: MainInterface ) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
     lateinit var adapter: MyAdapter
+      var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
+
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE " + TABLE + " (" +
@@ -98,20 +100,48 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
         return Integer.parseInt("$success") != -1
     }
 
-    fun archive(id: Int): Boolean {
-        val db: SQLiteDatabase = this.readableDatabase
-         val contentValues = ContentValues()
-         contentValues.put(ID, id)
-        contentValues.put(COL_TASK_TITLE,id)
-        contentValues.put(COL_TASK_TEXT,id)
-        contentValues.put(COL_TASK_DATE,id)
+    fun archive(list: List<MyObject>) {
+        val db =this.readableDatabase
 
-        val success = db.insert(TABLEARCHIVE, null, contentValues)
+        db.beginTransaction()
+        try {
+            val values = ContentValues()
+            for (item in list) {
+                values.put(ID, item.id)
+                values.put(COL_TASK_TITLE, item.title)
+                values.put(COL_TASK_TEXT,item.text)
+                values.put(COL_TASK_DATE,item.record)
 
-         db.close()
+                db.insert(TABLEARCHIVE, null, values)
+            }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
 
-        return Integer.parseInt("$success") != -1
+        }
     }
+
+    fun unarchive(list: List<MyObject>) {
+        val db =this.readableDatabase
+
+        db.beginTransaction()
+        try {
+            val values = ContentValues()
+            for (item in list) {
+                values.put(ID, item.id)
+                values.put(COL_TASK_TITLE, item.title)
+                values.put(COL_TASK_TEXT,item.text)
+                values.put(COL_TASK_DATE,item.record)
+
+                db.insert(TABLE, null, values)
+            }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+
+        }
+    }
+
 
     val users: List<MyObject>
         get() {
@@ -141,26 +171,30 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
 
 
 
+    val getselectedid : List<MyObject>
+        get() {
+            val db = this.getReadableDatabase()
+            adapter = MyAdapter(context,hashMapArrayList, mainInterface)
+             val userList = ArrayList<MyObject>()
+            val selectedid  = adapter.selectedIds.toString().toInt()
+              val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
+            val cursor = db.rawQuery(selectQuery, null)
+                if (cursor != null && cursor.moveToFirst()) {
+                    do {
+                        val user = MyObject()
+                        user.id = cursor.getInt(cursor.getColumnIndex(ID))
+                        user.title = cursor.getString(cursor.getColumnIndex(COL_TASK_TITLE))
+                        user.text = cursor.getString(cursor.getColumnIndex(COL_TASK_TEXT))
+                        user.record = cursor.getString(cursor.getColumnIndex(COL_TASK_DATE))
+                        userList.add(user)
+                    } while (cursor.moveToNext())
+                }
 
-    fun add_item(list: List<MyObject>) {
-        val db =this.readableDatabase
+            return userList
 
-        db.beginTransaction()
-        try {
-            val values = ContentValues()
-            for (item in list) {
-                values.put(ID, item.id)
-                values.put(COL_TASK_TITLE, item.title)
-                values.put(COL_TASK_TEXT,item.text)
-                values.put(COL_TASK_DATE,item.record)
-
-                db.insert(TABLEARCHIVE, null, values)
-            }
-            db.setTransactionSuccessful()
-        } finally {
-            db.endTransaction()
         }
-    }
+
+
 
 
     companion object {
@@ -177,7 +211,6 @@ class Databasehelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null
 
 
     }
-
 
 
 

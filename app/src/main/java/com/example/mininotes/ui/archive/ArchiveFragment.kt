@@ -2,10 +2,7 @@ package com.example.mininotes.ui.archive
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mininotes.Db.Databasehelper
@@ -14,8 +11,6 @@ import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
 import com.example.mininotes.R
 import com.example.mininotes.adapter.MyAdapter
-import com.example.mininotes.ui.notes.NotesFragment
-import java.util.Observer
 
 class ArchiveFragment : Fragment(), MainInterface {
 
@@ -47,7 +42,7 @@ class ArchiveFragment : Fragment(), MainInterface {
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_archive)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!)
+        mHelper = Databasehelper(context!!,this)
 
         readData()
 
@@ -70,7 +65,7 @@ class ArchiveFragment : Fragment(), MainInterface {
 
                 hashMapArrayList.add(hashMap)
             }
-            adapter = MyAdapter((context as MainActivity?)!!,hashMapArrayList,this)
+            adapter = MyAdapter((context as MainActivity?)!!,hashMapArrayList, this)
             recyclerView.adapter = adapter
 
 
@@ -89,7 +84,7 @@ class ArchiveFragment : Fragment(), MainInterface {
 
                 R.id.action_unarchive ->{
 
-
+                     actionMode?.finish()
 
                  }
 

@@ -50,7 +50,7 @@ class NotesFragment : Fragment(), MainInterface {
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_todo)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!)
+        mHelper = Databasehelper(context!!,this)
 
         // readData()
 
@@ -81,7 +81,7 @@ class NotesFragment : Fragment(), MainInterface {
 
                 hashMapArrayList.add(hashMap)
             }
-            adapter = MyAdapter((context as MainActivity?)!!, hashMapArrayList, this)
+            adapter = MyAdapter((context as MainActivity?)!!, hashMapArrayList,this)
             recyclerView.adapter = adapter
 
 
@@ -143,8 +143,7 @@ class NotesFragment : Fragment(), MainInterface {
         }
 
         override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-            menu?.findItem(R.id.action_delete)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-            menu?.findItem(R.id.acton_archive)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+
             return true
         }
 
@@ -160,6 +159,9 @@ class NotesFragment : Fragment(), MainInterface {
 
 
     }
+
+
+
 
     companion object {
         var ID: String = "id"
