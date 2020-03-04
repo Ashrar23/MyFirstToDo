@@ -21,11 +21,11 @@ import com.example.mininotes.ui.notes.NotesFragment
 class MyAdapter(
     val context: Context,
     val arrayList: ArrayList<HashMap<String, String>>,
-    val mainInterface: MainInterface
-
+    val mainInterface: MainInterface? = null
 ) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
 
     lateinit var mHelper: Databasehelper
+
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
@@ -45,10 +45,13 @@ class MyAdapter(
             holder.check.setBackgroundResource(R.drawable.cardborder)
         }
 
+
+
+
         holder.titleView.text = arrayList.get(position).get(COL_TASK_TITLE)
         holder.textView.text = arrayList.get(position).get(COL_TASK_TEXT)
         holder.time.text = arrayList.get(position).get(COL_TASK_DATE)
-        mHelper = Databasehelper(context,mainInterface)
+        mHelper = Databasehelper(context)
 
 
         holder.titleView.setOnClickListener {
@@ -61,10 +64,6 @@ class MyAdapter(
             context.startActivity(intent)
 
         }
-
-       val lastSelectedPosition = holder.getAdapterPosition();
-
-
 
     }
 
@@ -93,23 +92,16 @@ class MyAdapter(
         val selectedIdIteration = selectedIds.listIterator()
         while (selectedIdIteration.hasNext()) {
             val selectedItemID = selectedIdIteration.next()
-            var indexOfModelList = 0
-            val modelListIteration: MutableListIterator<HashMap<String, String>> =
-                arrayList.listIterator()
-            while (modelListIteration.hasNext()) {
-                val model = modelListIteration.next()
-                if (selectedItemID.equals(model.get(ID))) {
-                    modelListIteration.remove()
-                    selectedIdIteration.remove()
-                    mHelper.delete(selectedItemID.toInt())
-                    notifyItemRemoved(indexOfModelList)
-                }
-                indexOfModelList++
-            }
-            NotesFragment.isMultiSelectOn = false
-        }
-    }
 
+            mHelper.delete(selectedItemID.toInt())
+                selectedIdIteration.remove()
+                notifyItemRemoved(selectedItemID.toInt())
+
+
+
+        }
+        NotesFragment.isMultiSelectOn = false
+    }
 
 
 
@@ -120,26 +112,21 @@ class MyAdapter(
         while (selectedIdIteration.hasNext()) {
             val selectedItemId = selectedIdIteration.next()
             var indexModelList = 0
-            val modelListIterator: MutableListIterator<HashMap<String, String>> =
-                arrayList.listIterator()
-            while (modelListIterator.hasNext()) {
-                val model = modelListIterator.next()
-                if (selectedItemId.equals(model.get(ID))) {
-                    modelListIterator.remove()
-                    selectedIdIteration.nextIndex()
+                   mHelper.archive(mHelper.getselectedid)
+                      selectedIdIteration.remove()
+                       mHelper.delete(selectedItemId.toInt())
+            notifyItemRemoved(indexModelList)
 
-                        mHelper.archive(mHelper.getselectedid)
-                      //mHelper.delete(selectedItemId.toInt())
-                        notifyItemRemoved(indexModelList)
-                }
-                indexModelList++
-            }
-            ArchiveFragment.isMultiSelectOn
+
         }
+        ArchiveFragment.isMultiSelectOn
+
     }
 
 
     fun addIDIntoSelectedIds(position: Int) {
+
+
         val  id = arrayList.get(position).get(ID).toString()
         if (selectedIds.contains(id)) {
             selectedIds.remove(id)
@@ -147,14 +134,14 @@ class MyAdapter(
             selectedIds.add(id)
         notifyItemChanged(position)
         }
-        if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
-        mainInterface.mainInterface(selectedIds.size)
-
-
+        if (selectedIds.size < 1) {
+            NotesFragment.isMultiSelectOn = false
+               mainInterface?.mainInterface(selectedIds.size)
+        }
 
     }
 
-    val selectedIds: MutableList<String> = java.util.ArrayList<String>()
+    var selectedIds: MutableList<String> = ArrayList<String>()
 
     companion object {
         var ID: String = "id"
@@ -163,6 +150,9 @@ class MyAdapter(
         val COL_TASK_DATE: String = "date"
 
     }
+
+
+
 
 
 

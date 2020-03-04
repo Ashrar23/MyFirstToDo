@@ -4,19 +4,19 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.mininotes.Interface.MainInterface
-import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
-import com.example.mininotes.MyViewHolder
 import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.ui.notes.NotesFragment
 import java.util.*
+import kotlin.collections.ArrayList
 
 
-class Databasehelper(val context: Context, val mainInterface: MainInterface ) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+class Databasehelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
     lateinit var adapter: MyAdapter
-      var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
+    lateinit var notesFragment: NotesFragment
+    var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
+
 
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -100,6 +100,8 @@ class Databasehelper(val context: Context, val mainInterface: MainInterface ) : 
         return Integer.parseInt("$success") != -1
     }
 
+
+     
     fun archive(list: List<MyObject>) {
         val db =this.readableDatabase
 
@@ -174,9 +176,9 @@ class Databasehelper(val context: Context, val mainInterface: MainInterface ) : 
     val getselectedid : List<MyObject>
         get() {
             val db = this.getReadableDatabase()
-            adapter = MyAdapter(context,hashMapArrayList, mainInterface)
-             val userList = ArrayList<MyObject>()
-            val selectedid  = adapter.selectedIds.toString().toInt()
+            adapter = MyAdapter(context ,hashMapArrayList)
+               val userList = ArrayList<MyObject>()
+            val selectedid  = adapter.selectedIds
               val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
             val cursor = db.rawQuery(selectQuery, null)
                 if (cursor != null && cursor.moveToFirst()) {
@@ -208,6 +210,8 @@ class Databasehelper(val context: Context, val mainInterface: MainInterface ) : 
         val COL_TASK_TITLE: String = "title"
         val COL_TASK_TEXT: String = "text"
         val COL_TASK_DATE: String = "date"
+
+        val selectedid : MutableList<String> =  ArrayList<String>()
 
 
     }

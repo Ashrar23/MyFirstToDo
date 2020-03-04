@@ -11,11 +11,13 @@ import com.example.mininotes.Interface.MainInterface
 import java.text.SimpleDateFormat
 import java.util.*
 
-class UpdateNotesActivity(val mainInterface: MainInterface) : Activity () {
+class UpdateNotesActivity() : AppCompatActivity () {
 
     lateinit var update : Button
     lateinit var edttitle : EditText
     lateinit var edttask : EditText
+
+
 
 
     lateinit var  databaseHelper: Databasehelper
@@ -38,7 +40,7 @@ class UpdateNotesActivity(val mainInterface: MainInterface) : Activity () {
         edttask=findViewById(R.id.task_edit_text)
 
 
-        databaseHelper= Databasehelper(this,mainInterface)
+        databaseHelper= Databasehelper(this)
 
         id = intent?.getStringExtra(ID).toString()
         edttitle.setText(intent.getStringExtra(COL_TASK_TITLE))

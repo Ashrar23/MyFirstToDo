@@ -1,7 +1,9 @@
 package com.example.mininotes.ui.archive
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +13,7 @@ import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
 import com.example.mininotes.R
 import com.example.mininotes.adapter.MyAdapter
+
 
 class ArchiveFragment : Fragment(), MainInterface {
 
@@ -26,9 +29,12 @@ class ArchiveFragment : Fragment(), MainInterface {
 
 
     override fun mainInterface(size: Int) {
-        if (actionMode == null) actionMode = view?.startActionMode(ActionModeCallBack())
+        if (actionMode == null) actionMode = view!!.startActionMode(ActionModeCallBack())
         if (size > 0) actionMode?.setTitle("$size item selected")
         else actionMode?.finish()
+
+
+
     }
 
 
@@ -42,7 +48,7 @@ class ArchiveFragment : Fragment(), MainInterface {
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_archive)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!,this)
+        mHelper = Databasehelper(context!!)
 
         readData()
 
@@ -65,7 +71,7 @@ class ArchiveFragment : Fragment(), MainInterface {
 
                 hashMapArrayList.add(hashMap)
             }
-            adapter = MyAdapter((context as MainActivity?)!!,hashMapArrayList, this)
+            adapter = MyAdapter((context as MainActivity?)!!,hashMapArrayList)
             recyclerView.adapter = adapter
 
 

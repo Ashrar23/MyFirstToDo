@@ -6,6 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,8 +16,8 @@ import com.example.mininotes.Db.Databasehelper
 import com.example.mininotes.Interface.MainInterface
 import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
-import com.example.mininotes.adapter.MyAdapter
 import com.example.mininotes.R
+import com.example.mininotes.adapter.MyAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -50,7 +52,8 @@ class NotesFragment : Fragment(), MainInterface {
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_todo)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!,this)
+        mHelper = Databasehelper(context!!)
+
 
         // readData()
 
@@ -81,7 +84,7 @@ class NotesFragment : Fragment(), MainInterface {
 
                 hashMapArrayList.add(hashMap)
             }
-            adapter = MyAdapter((context as MainActivity?)!!, hashMapArrayList,this)
+            adapter = MyAdapter((context as MainActivity?)!!, hashMapArrayList )
             recyclerView.adapter = adapter
 
 
@@ -143,7 +146,6 @@ class NotesFragment : Fragment(), MainInterface {
         }
 
         override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-
             return true
         }
 
@@ -159,6 +161,7 @@ class NotesFragment : Fragment(), MainInterface {
 
 
     }
+
 
 
 

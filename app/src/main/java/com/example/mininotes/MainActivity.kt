@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        setTitle("Notes")
+
 
 
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerToggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
 
 
         toolbar.setTitle("Notes")
