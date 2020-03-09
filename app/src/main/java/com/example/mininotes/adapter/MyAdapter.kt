@@ -129,7 +129,7 @@ class MyAdapter(
                     selectedIdIteration.nextIndex()
 
                         mHelper.archive(mHelper.getselectedid)
-                      //mHelper.delete(selectedItemId.toInt())
+                        mHelper.delete(selectedItemId.toInt())
                         notifyItemRemoved(indexModelList)
                 }
                 indexModelList++

@@ -13,7 +13,7 @@ import com.example.mininotes.ui.notes.NotesFragment
 import java.util.*
 
 
-class Databasehelper(val context: Context, val mainInterface: MainInterface? = null ) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+class Databasehelper(val context: Context, var mainInterface: MainInterface? = null ) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
     lateinit var adapter: MyAdapter
       var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
@@ -174,7 +174,8 @@ class Databasehelper(val context: Context, val mainInterface: MainInterface? = n
     val getselectedid : List<MyObject>
         get() {
             val db = this.getReadableDatabase()
-            adapter = MyAdapter(context,hashMapArrayList,mainInterface!!)
+
+             adapter = MyAdapter(context,hashMapArrayList, this.mainInterface!!)
              val userList = ArrayList<MyObject>()
             val selectedid  = adapter.selectedIds
               val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
