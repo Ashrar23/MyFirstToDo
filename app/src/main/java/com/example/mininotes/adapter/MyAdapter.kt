@@ -48,7 +48,7 @@ class MyAdapter(
         holder.titleView.text = arrayList.get(position).get(COL_TASK_TITLE)
         holder.textView.text = arrayList.get(position).get(COL_TASK_TEXT)
         holder.time.text = arrayList.get(position).get(COL_TASK_DATE)
-        mHelper = Databasehelper(context,mainInterface)
+        mHelper = Databasehelper(context)
 
 
         holder.titleView.setOnClickListener {

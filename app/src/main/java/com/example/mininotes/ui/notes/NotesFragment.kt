@@ -50,7 +50,7 @@ class NotesFragment : Fragment(), MainInterface {
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_todo)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!,this)
+        mHelper = Databasehelper(context!!)
 
         // readData()
 

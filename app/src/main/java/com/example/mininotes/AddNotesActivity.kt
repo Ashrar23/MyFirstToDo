@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class AddNotesActivity(val mainInterface: MainInterface)  : AppCompatActivity() {
+class AddNotesActivity  : AppCompatActivity() {
 
     lateinit var save : Button
     lateinit var edttitle : EditText
@@ -30,7 +30,7 @@ class AddNotesActivity(val mainInterface: MainInterface)  : AppCompatActivity() 
             edttitle = findViewById(R.id.title_edit_text)
             edttask = findViewById(R.id.task_edit_text)
 
-            dbHelper = Databasehelper(this,mainInterface)
+            dbHelper = Databasehelper(this)
 
 
             save.setOnClickListener{

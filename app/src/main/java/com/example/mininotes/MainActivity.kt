@@ -1,6 +1,7 @@
 package com.example.mininotes
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        setTitle("Notes")
 
 
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
@@ -47,13 +49,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerToggle.isDrawerIndicatorEnabled = true
         drawer_layout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
-
         nav_view.setNavigationItemSelectedListener(this)
 
 
-        toolbar.setTitle("Notes")
         notesFragment = NotesFragment()
-        supportFragmentManager
+         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_lyout, notesFragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)

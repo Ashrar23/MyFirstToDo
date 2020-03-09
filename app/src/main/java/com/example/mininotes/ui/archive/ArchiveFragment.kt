@@ -1,7 +1,9 @@
 package com.example.mininotes.ui.archive
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,8 +27,12 @@ class ArchiveFragment : Fragment(), MainInterface {
 
 
 
+
+
     override fun mainInterface(size: Int) {
-        if (actionMode == null) actionMode = view?.startActionMode(ActionModeCallBack())
+        val toolbar: Toolbar? = view?.findViewById(R.id.toolbar)
+        if (actionMode == null) actionMode =  toolbar?.startActionMode(ActionModeCallBack())
+        toolbar?.setBackgroundColor(Color.GREEN)
         if (size > 0) actionMode?.setTitle("$size item selected")
         else actionMode?.finish()
     }
@@ -36,13 +42,17 @@ class ArchiveFragment : Fragment(), MainInterface {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+
+
+
+
         isMultiSelectOn = false
 
         val view: View = inflater.inflate(R.layout.fragment_archive, container, false)
         setHasOptionsMenu(true)
         recyclerView = view.findViewById(R.id.list_archive)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        mHelper = Databasehelper(context!!,this)
+        mHelper = Databasehelper(context!!)
 
         readData()
 

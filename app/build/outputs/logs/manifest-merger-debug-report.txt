@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\a0afc8b201cf4466cc4fbf7a63f492ad\navigation-ui-ktx-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\220aa529bb38342b308aae96c1bc3d78\jetified-navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\66ae37baeab31b838be0f63178250eec\material-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -52,25 +52,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ashrar\.gradle\c
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\335a960fb2ae03c6c6e21b869f55d6d3\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\9a7e790de663c84bcf8176d8c947b14a\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\9b9c518c5f58b42f871ef05423bea9af\print-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:1-27:12
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:5:5-25:20
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:5:5-25:20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\66ae37baeab31b838be0f63178250eec\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\66ae37baeab31b838be0f63178250eec\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\8fcdfe5991a32b4b7dca61134e5c749c\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -86,43 +86,43 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\As
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\61a4322994bff311c55a1e748aab7916\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.mininotes.MainActivity
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.example.mininotes.AddNotesActivity
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:9-20:20
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:19:9-20:20
 	android:name
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:19:19-51
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:19:19-51
 activity#com.example.mininotes.UpdateNotesActivity
-ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:21:9-23:20
+ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:21:9-23:20
 	android:name
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml:21:19-54
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml:21:19-54
 uses-sdk
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\a0afc8b201cf4466cc4fbf7a63f492ad\navigation-ui-ktx-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\a0afc8b201cf4466cc4fbf7a63f492ad\navigation-ui-ktx-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\220aa529bb38342b308aae96c1bc3d78\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
@@ -219,16 +219,16 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\9a7e790de663c84bcf8176d8c947b14a\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\9b9c518c5f58b42f871ef05423bea9af\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\9b9c518c5f58b42f871ef05423bea9af\print-1.0.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Ashrar\StudioProjects\MiniNotes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ashrar\StudioProjects\MyFirstToDo\app\src\main\AndroidManifest.xml
 provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Ashrar\.gradle\caches\transforms-2\files-2.1\7077a31a382867bc615ebdab4c4e3b76\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
 	android:authorities

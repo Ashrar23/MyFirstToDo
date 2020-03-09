@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\ebc79cc7836754e7a7a31df4a17eb6a5\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",

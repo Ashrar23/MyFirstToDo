@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
+            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\220aa529bb38342b308aae96c1bc3d78\\jetified-navigation-ui-2.0.0\\res\\values-ka\\values-ka.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MiniNotes\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
+            "outputFile": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pa\\values-pa.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\values-pa\\values-pa.xml",
