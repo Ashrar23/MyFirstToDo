@@ -21,7 +21,7 @@ import com.example.mininotes.ui.notes.NotesFragment
 class MyAdapter(
     val context: Context,
     val arrayList: ArrayList<HashMap<String, String>>,
-    val mainInterface: MainInterface
+    val mainInterface: MainInterface? = null
 
 ) : RecyclerView.Adapter<MyViewHolder>(), ViewHolderClickListner {
 
@@ -38,31 +38,30 @@ class MyAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
 
-        val id = arrayList.get(position).get(ID)
-        if (selectedIds.contains(id)) {
+        val id = arrayList[position][ID]
+        if (selectedIds.contains(id))
             holder.check.setBackgroundResource(R.drawable.cardborderselect)
-        } else {
+            else
             holder.check.setBackgroundResource(R.drawable.cardborder)
-        }
 
-        holder.titleView.text = arrayList.get(position).get(COL_TASK_TITLE)
-        holder.textView.text = arrayList.get(position).get(COL_TASK_TEXT)
-        holder.time.text = arrayList.get(position).get(COL_TASK_DATE)
+
+        holder.titleView.text = arrayList[position][COL_TASK_TITLE]
+        holder.textView.text = arrayList[position][COL_TASK_TEXT]
+        holder.time.text = arrayList[position][COL_TASK_DATE]
         mHelper = Databasehelper(context)
 
 
         holder.titleView.setOnClickListener {
 
             val intent = Intent(context, UpdateNotesActivity::class.java)
-            intent.putExtra(ID, arrayList.get(position).get(ID))
-            intent.putExtra(COL_TASK_TITLE, arrayList.get(position).get(COL_TASK_TITLE))
-            intent.putExtra(COL_TASK_TEXT, arrayList.get(position).get(COL_TASK_TEXT))
-            intent.putExtra(COL_TASK_DATE, arrayList.get(position).get(COL_TASK_DATE))
+            intent.putExtra(ID, arrayList[position][ID])
+            intent.putExtra(COL_TASK_TITLE, arrayList[position][COL_TASK_TITLE])
+            intent.putExtra(COL_TASK_TEXT, arrayList[position][COL_TASK_TEXT])
+            intent.putExtra(COL_TASK_DATE, arrayList[position][COL_TASK_DATE])
             context.startActivity(intent)
 
         }
 
-       val lastSelectedPosition = holder.getAdapterPosition();
 
 
 
@@ -120,8 +119,7 @@ class MyAdapter(
         while (selectedIdIteration.hasNext()) {
             val selectedItemId = selectedIdIteration.next()
             var indexModelList = 0
-            val modelListIterator: MutableListIterator<HashMap<String, String>> =
-                arrayList.listIterator()
+            val modelListIterator: MutableListIterator<HashMap<String, String>> = arrayList.listIterator()
             while (modelListIterator.hasNext()) {
                 val model = modelListIterator.next()
                 if (selectedItemId.equals(model.get(ID))) {
@@ -141,14 +139,12 @@ class MyAdapter(
 
     fun addIDIntoSelectedIds(position: Int) {
         val  id = arrayList.get(position).get(ID).toString()
-        if (selectedIds.contains(id)) {
-            selectedIds.remove(id)
-        }else{
+        if (selectedIds.contains(id)) selectedIds.remove(id) else{
             selectedIds.add(id)
         notifyItemChanged(position)
         }
         if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
-        mainInterface.mainInterface(selectedIds.size)
+        mainInterface?.mainInterface(selectedIds.size)
 
 
 

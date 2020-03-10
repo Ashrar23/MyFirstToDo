@@ -14,7 +14,7 @@ class MyViewHolder (itemView: View , val tap : ViewHolderClickListner) : Recycle
     val textView = itemView.findViewById<TextView>(R.id.task_text)
     val time = itemView.findViewById<TextView>(R.id.txt_time)
     val card = itemView.findViewById<CardView>(R.id.card)
-    val check = itemView.findViewById<ConstraintLayout>(R.id.select)
+    val check = itemView.findViewById<ConstraintLayout>(R.id.select)!!
 
 
 
