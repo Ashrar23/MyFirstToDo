@@ -5,6 +5,4 @@ class MyObject {
     var title: String = ""
     var text: String = ""
     var record: String = ""
-
-
  }

@@ -38,6 +38,7 @@ class MyAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
 
+
         val id = arrayList[position][ID]
         if (selectedIds.contains(id))
             holder.check.setBackgroundResource(R.drawable.cardborderselect)
@@ -137,12 +138,14 @@ class MyAdapter(
     }
 
 
-    fun addIDIntoSelectedIds(position: Int) {
+    private fun addIDIntoSelectedIds(position: Int) {
         val  id = arrayList.get(position).get(ID).toString()
-        if (selectedIds.contains(id)) selectedIds.remove(id) else{
+        if (selectedIds.contains(id))
+            selectedIds.remove(id)
+         else
             selectedIds.add(id)
         notifyItemChanged(position)
-        }
+
         if (selectedIds.size < 1) NotesFragment.isMultiSelectOn = false
         mainInterface?.mainInterface(selectedIds.size)
 

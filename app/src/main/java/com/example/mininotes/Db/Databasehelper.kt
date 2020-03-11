@@ -1,5 +1,6 @@
 package com.example.mininotes.Db
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -172,14 +173,15 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
 
 
     val getselectedid : List<MyObject>
+        @SuppressLint("Recycle")
         get() {
             val db = this.getReadableDatabase()
 
 
              adapter = MyAdapter(context,hashMapArrayList)
-             val userList = ArrayList<MyObject>()
+            val userList = ArrayList<MyObject>()
             val selectedid  = adapter.selectedIds
-              val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
+            val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
             val cursor = db.rawQuery(selectQuery, null)
                 if (cursor != null && cursor.moveToFirst()) {
                     do {

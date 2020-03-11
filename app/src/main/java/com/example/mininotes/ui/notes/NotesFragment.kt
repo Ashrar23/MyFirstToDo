@@ -126,7 +126,7 @@ class NotesFragment : Fragment(), MainInterface {
 
                 }
 
-                R.id.acton_archive -> {
+                 R.id.acton_archive -> {
                     adapter.archiveselectedIds()
                     actionMode?.finish()
 

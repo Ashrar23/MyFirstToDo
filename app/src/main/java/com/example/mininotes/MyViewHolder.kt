@@ -20,7 +20,6 @@ class MyViewHolder (itemView: View , val tap : ViewHolderClickListner) : Recycle
 
 
     init {
-
         card.setOnClickListener(this)
         card.setOnLongClickListener(this)
     }
