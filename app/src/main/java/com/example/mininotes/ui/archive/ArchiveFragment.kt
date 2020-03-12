@@ -13,6 +13,7 @@ import com.example.mininotes.MainActivity
 import com.example.mininotes.MyObject
 import com.example.mininotes.R
 import com.example.mininotes.adapter.MyAdapter
+import kotlinx.android.synthetic.main.appbar_main.*
 
 class ArchiveFragment : Fragment(), MainInterface {
 
@@ -30,10 +31,8 @@ class ArchiveFragment : Fragment(), MainInterface {
 
 
     override fun mainInterface(size: Int) {
-        val toolbar: Toolbar? = view?.findViewById(R.id.toolbar)
-        if (actionMode == null) actionMode =  toolbar?.startActionMode(ActionModeCallBack())
-        toolbar?.setBackgroundColor(Color.GREEN)
-        if (size > 0) actionMode?.setTitle("$size item selected")
+         if (actionMode == null) actionMode =   view?.startActionMode(ActionModeCallBack())
+         if (size > 0) actionMode?.setTitle("$size item selected")
         else actionMode?.finish()
     }
 
@@ -94,7 +93,7 @@ class ArchiveFragment : Fragment(), MainInterface {
 
                 R.id.action_unarchive ->{
 
-                     actionMode?.finish()
+                      actionMode?.finish()
 
                  }
 
@@ -109,8 +108,7 @@ class ArchiveFragment : Fragment(), MainInterface {
             return true        }
 
         override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-            menu?.findItem(R.id.action_unarchive)?.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-             return true        }
+              return true        }
 
         override fun onDestroyActionMode(mode: ActionMode?) {
             if (shouldResetRecyclerView) {
@@ -119,14 +117,14 @@ class ArchiveFragment : Fragment(), MainInterface {
             }
             isMultiSelectOn = false
             actionMode = null
-            shouldResetRecyclerView = true        }
+            shouldResetRecyclerView = false      }
     }
 
     companion object{
         var ID: String = "id"
         val COL_TASK_TITLE: String = "title"
-        val COL_TASK_TEXT: String = "text"
-        val COL_TASK_DATE: String = "date"
+        val COL_TASK_TEXT : String = "text"
+        val COL_TASK_DATE : String = "date"
 
         var isMultiSelectOn = false
 

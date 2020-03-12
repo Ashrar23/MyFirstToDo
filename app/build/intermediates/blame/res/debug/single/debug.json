@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_archive_black_24dp.png.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_archive_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_archive_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\menu_insert_data.xml.flat",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
@@ -56,20 +56,20 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\abc_tooltip_exit.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\interpolator\\btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\color\\mtrl_tabs_icon_color_selector.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\interpolator\\btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_mtrl_fast_out_linear_in.xml.flat",
@@ -84,16 +84,16 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\color\\mtrl_bottom_nav_colored_item_tint.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material_anim.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_check_material_anim.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\color\\mtrl_btn_text_color_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material_anim.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_check_material_anim.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
@@ -172,24 +172,24 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_tooltip.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
-    },
-    {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_dot_group_animation.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_dot_group_animation.xml"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_tooltip.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_dot_group_animation.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_dot_group_animation.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
@@ -216,24 +216,24 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\btn_checkbox_unchecked_mtrl.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_arrow_back_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_arrow_back_black_24dp.png.flat",
-        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_arrow_back_black_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_show_motion_spec.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\animator\\design_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_design_tint_password_toggle.xml.flat",
@@ -256,12 +256,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_top.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -276,12 +276,12 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
-        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\design_fab_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
+        "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -298,6 +298,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_rate_review_black_24dp.xml.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_rate_review_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
@@ -380,12 +384,24 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_rate_review_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
@@ -568,6 +584,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\design_password_eye.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_rate_review_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -620,6 +640,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\layout\\abc_cascading_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_rate_review_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -630,6 +654,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_borderless_material.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_rate_review_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_hide_password.xml.flat",
@@ -1336,6 +1364,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_bottom_navigation_item_background.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\66ae37baeab31b838be0f63178250eec\\material-1.0.0\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
@@ -1600,6 +1632,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -1688,6 +1724,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_rate_review_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
@@ -1744,6 +1784,10 @@
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\220aa529bb38342b308aae96c1bc3d78\\jetified-navigation-ui-2.0.0\\res\\anim\\nav_default_pop_enter_anim.xml"
     },
     {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\61a4322994bff311c55a1e748aab7916\\core-1.1.0\\res\\layout\\notification_template_part_time.xml"
     },
@@ -1790,6 +1834,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_rate_review_black_24dp.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_rate_review_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cardborder.xml.flat",
@@ -2242,6 +2290,10 @@
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_bottom.xml.flat",
         "source": "C:\\Users\\Ashrar\\.gradle\\caches\\transforms-2\\files-2.1\\d6d67bc37b84424b7220ebbd8f9dcd07\\appcompat-1.1.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\src\\main\\res\\drawable\\icon.png"
     },
     {
         "merged": "C:\\Users\\Ashrar\\StudioProjects\\MyFirstToDo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",

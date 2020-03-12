@@ -679,6 +679,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1079,7 +1080,9 @@ drawable ic_mode_edit_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_rate_review_black_24dp
 drawable ic_unarchive_black_24dp
+drawable icon
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1227,7 +1230,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id info
 id insert
 id invisible
@@ -1473,6 +1475,7 @@ menu main
 menu menu
 menu unarchive
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description

@@ -16,7 +16,7 @@ import java.util.*
 
 class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
-    lateinit var adapter: MyAdapter
+      lateinit var adapter: MyAdapter
       var hashMapArrayList: ArrayList<HashMap<String, String>> = ArrayList()
 
 
@@ -105,7 +105,7 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
         val db =this.readableDatabase
 
         db.beginTransaction()
-        try {
+      try {
             val values = ContentValues()
             for (item in list) {
                 values.put(ID, item.id)
@@ -118,7 +118,6 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
             db.setTransactionSuccessful()
         } finally {
             db.endTransaction()
-
         }
     }
 
@@ -173,16 +172,13 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
 
 
     val getselectedid : List<MyObject>
-        @SuppressLint("Recycle")
-        get() {
+         get() {
             val db = this.getReadableDatabase()
-
-
              adapter = MyAdapter(context,hashMapArrayList)
-            val userList = ArrayList<MyObject>()
-            val selectedid  = adapter.selectedIds
-            val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN ( $selectedid.joinToString( \",\")) "
-            val cursor = db.rawQuery(selectQuery, null)
+             val userList = ArrayList<MyObject>()
+             val selectedid  = adapter.selectedIds
+             val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN( $selectedid.joinToString( \",\")) "
+             val cursor = db.rawQuery(selectQuery, null)
                 if (cursor != null && cursor.moveToFirst()) {
                     do {
                         val user = MyObject()
