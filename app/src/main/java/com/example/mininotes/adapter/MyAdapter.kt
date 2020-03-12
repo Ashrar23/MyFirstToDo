@@ -28,6 +28,7 @@ class MyAdapter(
     lateinit var mHelper: Databasehelper
 
 
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, itemType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.list_items_todo, viewGroup, false)
@@ -127,7 +128,7 @@ class MyAdapter(
                     modelListIterator.remove()
                     selectedIdIteration.nextIndex()
 
-                        mHelper.archive(mHelper.getselectedid)
+                        mHelper.archive(mHelper.getSelectedData(selectedIds))
                         mHelper.delete(selectedItemId.toInt())
                         notifyItemRemoved(indexModelList)
                 }
@@ -136,6 +137,8 @@ class MyAdapter(
             ArchiveFragment.isMultiSelectOn
         }
     }
+
+
 
 
     private fun addIDIntoSelectedIds(position: Int) {

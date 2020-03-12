@@ -92,8 +92,9 @@ class ArchiveFragment : Fragment(), MainInterface {
             when(item?.itemId){
 
                 R.id.action_unarchive ->{
+                    shouldResetRecyclerView = false
 
-                      actionMode?.finish()
+                        actionMode?.finish()
 
                  }
 

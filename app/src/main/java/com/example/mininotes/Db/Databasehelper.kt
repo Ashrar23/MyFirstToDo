@@ -171,28 +171,39 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
 
 
 
-    val getselectedid : List<MyObject>
-         get() {
-            val db = this.getReadableDatabase()
-             adapter = MyAdapter(context,hashMapArrayList)
-             val userList = ArrayList<MyObject>()
-             val selectedid  = adapter.selectedIds
-             val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN( $selectedid.joinToString( \",\")) "
-             val cursor = db.rawQuery(selectQuery, null)
-                if (cursor != null && cursor.moveToFirst()) {
-                    do {
-                        val user = MyObject()
-                        user.id = cursor.getInt(cursor.getColumnIndex(ID))
-                        user.title = cursor.getString(cursor.getColumnIndex(COL_TASK_TITLE))
-                        user.text = cursor.getString(cursor.getColumnIndex(COL_TASK_TEXT))
-                        user.record = cursor.getString(cursor.getColumnIndex(COL_TASK_DATE))
-                        userList.add(user)
-                    } while (cursor.moveToNext())
-                }
+    fun getSelectedData(selectedIds:List<String>):List<MyObject>{
+        val db = this.getReadableDatabase()
+         val userList = ArrayList<MyObject>()
+         val selectedId = selectedIds.listIterator()
+        while (selectedId.hasNext()) {
+            val selectedItemID = selectedId.next()
+            val selectedid = selectedItemID.toInt()
+            val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN( $selectedid) "
+            val cursor = db.rawQuery(selectQuery, null)
+            if (cursor != null && cursor.moveToFirst()) {
+                do {
+                    val user = MyObject()
+                    user.id = cursor.getInt(cursor.getColumnIndex(ID))
+                    user.title = cursor.getString(cursor.getColumnIndex(COL_TASK_TITLE))
+                    user.text = cursor.getString(cursor.getColumnIndex(COL_TASK_TEXT))
+                    user.record = cursor.getString(cursor.getColumnIndex(COL_TASK_DATE))
+                    userList.add(user)
+                } while (cursor.moveToNext())
+            }
 
-            return userList
 
         }
+
+        return userList
+
+    }
+
+
+
+
+
+
+
 
 
 
