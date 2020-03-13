@@ -14,8 +14,7 @@ import com.example.mininotes.Interface.ViewHolderClickListner
 import com.example.mininotes.MyViewHolder
 import com.example.mininotes.R
 import com.example.mininotes.UpdateNotesActivity
-import com.example.mininotes.ui.archive.ArchiveFragment
-import com.example.mininotes.ui.notes.NotesFragment
+ import com.example.mininotes.ui.notes.NotesFragment
 
 
 class MyAdapter(
@@ -95,21 +94,22 @@ class MyAdapter(
         while (selectedIdIteration.hasNext()) {
             val selectedItemID = selectedIdIteration.next()
             var indexOfModelList = 0
-            val modelListIteration: MutableListIterator<HashMap<String, String>> =
-                arrayList.listIterator()
+            val modelListIteration: MutableListIterator<HashMap<String, String>> = arrayList.listIterator()
             while (modelListIteration.hasNext()) {
                 val model = modelListIteration.next()
-                if (selectedItemID.equals(model.get(ID))) {
+                if(selectedItemID.equals(model.get(ID))) {
                     modelListIteration.remove()
                     selectedIdIteration.remove()
-                    mHelper.delete(selectedItemID.toInt())
+                    mHelper.deletenotes(selectedItemID.toInt())
                     notifyItemRemoved(indexOfModelList)
                 }
                 indexOfModelList++
             }
             NotesFragment.isMultiSelectOn = false
+
         }
     }
+
 
 
 
@@ -129,14 +129,42 @@ class MyAdapter(
                     selectedIdIteration.nextIndex()
 
                         mHelper.archive(mHelper.getSelectedData(selectedIds))
-                        mHelper.delete(selectedItemId.toInt())
+                        mHelper.deletenotes(selectedItemId.toInt())
                         notifyItemRemoved(indexModelList)
                 }
                 indexModelList++
             }
-            ArchiveFragment.isMultiSelectOn
+
+         }
+    }
+
+
+
+    fun unarchiveselectedIds() {
+
+        if (selectedIds.size < 1) return
+        val selectedIdIteration = selectedIds.listIterator()
+        while (selectedIdIteration.hasNext()) {
+            val selectedItemId = selectedIdIteration.next()
+            var indexModelList = 0
+            val modelListIterator: MutableListIterator<HashMap<String, String>> = arrayList.listIterator()
+            while (modelListIterator.hasNext()) {
+                val model = modelListIterator.next()
+                if (selectedItemId.equals(model.get(ID))) {
+                    modelListIterator.remove()
+
+                    mHelper.unarchive(mHelper.restoreData(selectedIds))
+                    mHelper.deletearchive(selectedItemId.toInt())
+                     notifyItemRemoved(indexModelList)
+                }
+                indexModelList++
+            }
+
         }
     }
+
+
+
 
 
 

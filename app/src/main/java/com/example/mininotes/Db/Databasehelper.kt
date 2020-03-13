@@ -92,7 +92,7 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
         return Integer.parseInt("$_success") != -1
     }
 
-    fun delete(id: Int): Boolean {
+    fun deletenotes(id: Int): Boolean {
         val db = this.readableDatabase
         val values = ContentValues()
         values.put(ID, id)
@@ -100,6 +100,18 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
         db.close()
         return Integer.parseInt("$success") != -1
     }
+
+    fun deletearchive(id : Int): Boolean{
+        val db = this.readableDatabase
+        val values = ContentValues()
+        values.put(ID, id)
+        val success = db.delete(TABLEARCHIVE, ID + "=?", arrayOf(id.toString())).toLong()
+        db.close()
+        return Integer.parseInt("$success") != -1
+
+    }
+
+
 
     fun archive(list: List<MyObject>) {
         val db =this.readableDatabase
@@ -179,6 +191,33 @@ class Databasehelper(val context: Context ) : SQLiteOpenHelper(context, DB_NAME,
             val selectedItemID = selectedId.next()
             val selectedid = selectedItemID.toInt()
             val selectQuery = "SELECT * FROM $TABLE WHERE $ID IN( $selectedid) "
+            val cursor = db.rawQuery(selectQuery, null)
+            if (cursor != null && cursor.moveToFirst()) {
+                do {
+                    val user = MyObject()
+                    user.id = cursor.getInt(cursor.getColumnIndex(ID))
+                    user.title = cursor.getString(cursor.getColumnIndex(COL_TASK_TITLE))
+                    user.text = cursor.getString(cursor.getColumnIndex(COL_TASK_TEXT))
+                    user.record = cursor.getString(cursor.getColumnIndex(COL_TASK_DATE))
+                    userList.add(user)
+                } while (cursor.moveToNext())
+            }
+
+
+        }
+
+        return userList
+
+    }
+
+    fun restoreData(selectedIds:List<String>):List<MyObject>{
+        val db = this.getReadableDatabase()
+        val userList = ArrayList<MyObject>()
+        val selectedId = selectedIds.listIterator()
+        while (selectedId.hasNext()) {
+            val selectedItemID = selectedId.next()
+            val selectedid = selectedItemID.toInt()
+            val selectQuery = "SELECT * FROM $TABLEARCHIVE WHERE $ID IN( $selectedid) "
             val cursor = db.rawQuery(selectQuery, null)
             if (cursor != null && cursor.moveToFirst()) {
                 do {

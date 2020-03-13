@@ -26,25 +26,14 @@ class ArchiveFragment : Fragment(), MainInterface {
 
     var actionMode : ActionMode? = null
 
-
-
-
-
     override fun mainInterface(size: Int) {
          if (actionMode == null) actionMode =   view?.startActionMode(ActionModeCallBack())
-         if (size > 0) actionMode?.setTitle("$size item selected")
+         if (size > 0) actionMode?.title = "$size item selected"
         else actionMode?.finish()
     }
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
-
-
-
-
         isMultiSelectOn = false
 
         val view: View = inflater.inflate(R.layout.fragment_archive, container, false)
@@ -82,7 +71,6 @@ class ArchiveFragment : Fragment(), MainInterface {
 
     }
 
-
     inner class ActionModeCallBack : ActionMode.Callback {
 
         var shouldResetRecyclerView = true
@@ -92,19 +80,18 @@ class ArchiveFragment : Fragment(), MainInterface {
             when(item?.itemId){
 
                 R.id.action_unarchive ->{
-                    shouldResetRecyclerView = false
-
-                        actionMode?.finish()
+                     adapter.unarchiveselectedIds()
+                         actionMode?.finish()
 
                  }
 
             }
 
-            return true
+            return false
         }
 
         override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
-            val inflater = mode?.getMenuInflater()
+            val inflater = mode?.menuInflater
             inflater?.inflate(R.menu.unarchive, menu)
             return true        }
 
